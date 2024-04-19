@@ -4,6 +4,7 @@
     <tr style="background: purple;color:white">
         <td>No</td>
         <td>Judul</td>
+        <td>Tgl Mulai</td>
         <td>Aksi</td>
         <td></td>
     </tr>
@@ -12,6 +13,7 @@
     <tr>
         <td>{{ $loop->iteration }}</td>
         <td>{{ $item->judul }} </td>
+        <td>{{ $item->tgl_mulai }}</td>
         <td>
             <a href="{{ route('agenda.edit', $item->id) }}">Edit</a>
         </td>
