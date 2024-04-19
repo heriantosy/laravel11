@@ -7,60 +7,57 @@ use Illuminate\Http\Request;
 
 class AgendaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $agenda = AgendaModel::get();
         return view ('agenda.index', compact('agenda'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view ('agenda.add');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $request->validate(
+            [
+                'judul' => 'required',
+            ]);       
+       $agenda = new AgendaModel();
+       $agenda->judul = $request->judul;
+       $agenda->tgl_mulai = date('Y-m-d');
+       $agenda->tgl_selesai = date('Y-m-d');
+       $agenda->save();
+
+       return redirect()->route('agenda.index');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
-        //
+       $agenda = AgendaModel::findOrFail($id);
+      return view('agenda.edit', compact('agenda'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
-        //
+        $agenda = AgendaModel::findOrFail($id);
+        $agenda->judul          = $request->judul;
+        $agenda->tgl_mulai      = date('Y-m-d');
+        $agenda->tgl_selesai    = date('Y-m-d');
+        $agenda->save();
+        return redirect()->route('agenda.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
-        //
+        $agenda = AgendaModel::findOrFail($id);
+        $agenda->delete();
+        return redirect()->route('agenda.index');
     }
 }
