@@ -1,7 +1,7 @@
 <h1>Master Agenda</h1>
 <a href="{{ route('agenda.create') }}">Tambah Data</a>
 <table width="50%" border="1">
-    <tr>
+    <tr style="background: purple;color:white">
         <td>No</td>
         <td>Judul</td>
         <td>Aksi</td>

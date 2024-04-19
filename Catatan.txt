@@ -1,6 +1,10 @@
 git clone https://github.com/heriantosy/laravel11.git
 
+
 git status
 git pull origin main
+
+git init
+git add .
 git commit -m "perbaharui"
-git push origin main
+git push -u origin main
