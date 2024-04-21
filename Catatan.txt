@@ -1,6 +1,12 @@
+STEPS---------------------------------------------
+php artisan make:middleware AdminRedirect
+php artisan make:middleware AdminAuthenticate
+php artisan make:controller LoginController
+php artisan make:view login
+
+
+
 git clone https://github.com/heriantosy/laravel11.git
-
-
 git status
 git pull origin main
 

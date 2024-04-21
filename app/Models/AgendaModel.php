@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class AgendaModel extends Model
 {
     use HasFactory;
-
-    protected $table="agenda";
-    protected $primaryKey="id";
+    protected $table        ="agenda";
+    protected $primaryKey   ="id";
 }
+
+
