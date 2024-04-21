@@ -44,10 +44,3 @@ Route::group(['prefix' => 'admin'], function(){
     });
 
 });
-
-//untuk admin
-Route::prefix('admin')->group(function () {
-    Route::resource('prodi', Prodi::class);
-    Route::get('cetak-prodi', [Prodi::class, 'cetak'])->name('cetak-prodi'); //cetak-prodi bedakan dengan route resource
-
-});
