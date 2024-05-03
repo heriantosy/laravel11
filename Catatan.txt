@@ -23,3 +23,9 @@ composer require laravel/jetstream
 php artisan jetstream:install livewire (terus pilih no)
 npm install
 npm run build 
+
+MULTI USER
+------------------------------------------------------
+config/fortify.php 
+
+modifikasi 'home' => '/dashboard', menjadi 'home' => '/home',

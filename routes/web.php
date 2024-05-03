@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\LoginController; //leweh add user
 use App\Http\Controllers\Admin\LoginController as AdminLoginController; //leweh add admin
 use App\Http\Controllers\Admin\Prodi;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -54,3 +55,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('home', [HomeController::class, 'index']);
