@@ -14,3 +14,12 @@ git init
 git add .
 git commit -m "perbaharui"
 git push -u origin main
+
+
+INSTALL LOGIN JETSTREAM
+------------------------------------------------------
+download nodejs.org terbaru terlebih dahulu di bagian (https://nodejs.org/en/download/prebuilt-binaries)
+composer require laravel/jetstream
+php artisan jetstream:install livewire (terus pilih no)
+npm install
+npm run build 

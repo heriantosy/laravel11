@@ -18,11 +18,16 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+<<<<<<< Updated upstream
              $table->string('ProdiID');
              $table->string('unit');
            
             $table->enum('roles',['user','admin','dosen','mahasiswa'])->default('user');
+=======
+>>>>>>> Stashed changes
             $table->rememberToken();
+            $table->foreignId('current_team_id')->nullable();
+            $table->string('profile_photo_path', 2048)->nullable();
             $table->timestamps();
         });
 
