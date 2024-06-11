@@ -1,0 +1,31 @@
+STEPS---------------------------------------------
+php artisan make:middleware AdminRedirect
+php artisan make:middleware AdminAuthenticate
+php artisan make:controller LoginController
+php artisan make:view login
+
+
+
+git clone https://github.com/heriantosy/laravel11.git
+git status
+git pull origin main
+
+git init
+git add .
+git commit -m "perbaharui"
+git push -u origin main
+
+
+INSTALL LOGIN JETSTREAM
+------------------------------------------------------
+download nodejs.org terbaru terlebih dahulu di bagian (https://nodejs.org/en/download/prebuilt-binaries)
+composer require laravel/jetstream
+php artisan jetstream:install livewire (terus pilih no)
+npm install
+npm run build 
+
+MULTI USER
+------------------------------------------------------
+config/fortify.php 
+
+modifikasi 'home' => '/dashboard', menjadi 'home' => '/home',

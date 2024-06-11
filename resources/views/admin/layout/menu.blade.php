@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @php
 use Illuminate\Support\Facades\Auth;
 use App\Models\Tahun_model;
@@ -13,6 +14,18 @@ $unit    ='SI';
 
 
 
+=======
+
+@php 
+  use App\Models\Tahun_model;
+  use App\Models\Program_model;
+  $tahun    = Tahun_model::first();
+  $program  = Program_model::first();
+  $unit     = "SI";
+@endphp
+
+
+>>>>>>> 76fcd5592d409d18cc03c06f7773dd48cf402fd9
 <style type="text/css" media="screen">
   .nav ul li p !important {
     font-size: 12px;
@@ -28,16 +41,27 @@ $unit    ='SI';
     height: 2px; /* Sesuaikan dengan tinggi yang Anda inginkan */
   }
 </style>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 76fcd5592d409d18cc03c06f7773dd48cf402fd9
 <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{ asset('admin/dasbor') }}" class="brand-link">
+<<<<<<< HEAD
     <img src=""
          alt=""
          class="brand-image img-circle elevation-3"
          style="opacity: .8">
       <span class="brand-text font-weight-light">Galih</span>
+=======
+    <img src="{{ asset('assets/images/avatar.png') }}"
+         alt=""
+         class="brand-image img-circle elevation-3"
+         style="opacity: .8">
+      <span class="brand-text font-weight-light">namauser</span>
+>>>>>>> 76fcd5592d409d18cc03c06f7773dd48cf402fd9
     </a>
 
     <!-- Sidebar -->
@@ -65,8 +89,12 @@ $unit    ='SI';
               <p>Master <i class="fas fa-angle-left right"></i></p>
             </a>
             <ul class="nav nav-treeview">
+<<<<<<< HEAD
               <li class="nav-item"><a href="" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Identitas</p></a>
               </li>
+=======
+
+>>>>>>> 76fcd5592d409d18cc03c06f7773dd48cf402fd9
               <li class="nav-item"><a href="{{ asset('admin/tahun') }}?tahun={{ $tahun->TahunID }}&program={{ $program }}&prodi={{ $unit }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Data Tahun</p></a>
               </li>
               <li class="nav-item"><a href="{{ asset('admin/prodi') }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Data Prodi</p></a>
@@ -122,7 +150,11 @@ $unit    ='SI';
               <p>Jurusan<i class="fas fa-angle-left right"></i></p>
             </a>
             <ul class="nav nav-treeview">
+<<<<<<< HEAD
               <li class="nav-item"><a href="{{ asset('admin/jadwal') }}?tahun={{ $tahun->TahunID }}&program={{ $program }}&prodi={{ $unit }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Jadwal Kuliah</p></a>
+=======
+              <li class="nav-item"><a href="{{ asset('admin/jadwal/index') }}?tahun={{ $tahun->TahunID }}&program={{ $program }}&prodi={{ $unit }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Jadwal Kuliah</p></a>
+>>>>>>> 76fcd5592d409d18cc03c06f7773dd48cf402fd9
               </li>
               <li class="nav-item"><a href="{{ asset('admin/jadwalx') }}?tahun={{ $tahun->TahunID }}&program={{ $program }}&prodi={{ $unit }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Jadwal & File</p></a>
               </li>
@@ -131,7 +163,11 @@ $unit    ='SI';
               </li>
               <li class="nav-item"><a href="{{ asset('admin/absensi') }}?tahun={{ $tahun->TahunID }}&program={{ $program }}&prodi={{ $unit }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Absensi</p></a>
               </li>
+<<<<<<< HEAD
               <li class="nav-item"><a href="{{ asset('admin/krsadm') }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Kartu Rencana Studi (KRS)</p></a>
+=======
+              <li class="nav-item"><a href="{{ asset('admin.krsadm.index') }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Kartu Rencana Studi (KRS)</p></a>
+>>>>>>> 76fcd5592d409d18cc03c06f7773dd48cf402fd9
               </li>
               <li class="nav-item"><a href="{{ asset('admin/nilaieditmhs') }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Edit Nilai</p></a>
               </li>
@@ -139,6 +175,7 @@ $unit    ='SI';
               </li>
               <li class="nav-item"><a href="{{ asset('admin/transkrip') }}?tahun={{ $tahun->TahunID }}&program={{ $program }}&prodi={{ $unit }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Transkrip</p></a>
               </li>
+<<<<<<< HEAD
               <li class="nav-item"><a href="{{ asset('admin/aka_mhs') }}?tahun={{ $tahun->TahunID }}&program={{ $program }}&prodi={{ $unit }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Akademik & Jatah SKS</p></a>
               </li>
               <li class="nav-item"><a href="{{ asset('admin/rekapdata') }}?tahun={{ $tahun->TahunID }}&program={{ $program }}&prodi={{ $unit }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Rekap Data & IPS Mhs</p></a>
@@ -150,6 +187,19 @@ $unit    ='SI';
               <li class="nav-item"><a href="{{ asset('admin/beasiswaadm') }}?tahun={{ date('Y') }}&program={{ $program }}&prodi={{ $unit }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Beasiswa</p></a>
               </li>
               <li class="nav-item"><a href="{{ asset('admin/prestasimhs') }}?tahun={{ $tahun->TahunID }}&program={{ $program }}&prodi={{ $unit }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Prestasi</p></a>
+=======
+              <li class="nav-item"><a href="{{ asset('admin.aka_mhs.index') }}?tahun={{ $tahun->TahunID }}&program={{ $program }}&prodi={{ $unit }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Akademik & Jatah SKS</p></a>
+              </li>
+              <li class="nav-item"><a href="{{ asset('admin.rekapdata.index') }}?tahun={{ $tahun->TahunID }}&program={{ $program }}&prodi={{ $unit }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Rekap Data & IPS Mhs</p></a>
+              </li>
+              <li class="nav-item"><a href="{{ asset('mbkmadm.index') }}?tahun={{ $tahun->TahunID }}&program={{ $program }}&prodi={{ $unit }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>MBKM</p></a>
+              </li>
+              <li class="nav-item"><a href="{{ asset('suratadm.index') }}?tahun={{ $tahun->TahunID }}&program={{ $program }}&prodi={{ $unit }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Manajemen Surat</p></a>
+              </li>
+              <li class="nav-item"><a href="{{ asset('beasiswaadm.index') }}?tahun={{ date('Y') }}&program={{ $program }}&prodi={{ $unit }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Beasiswa</p></a>
+              </li>
+              <li class="nav-item"><a href="{{ asset('prestasimhs.index') }}?tahun={{ $tahun->TahunID }}&program={{ $program }}&prodi={{ $unit }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Prestasi</p></a>
+>>>>>>> 76fcd5592d409d18cc03c06f7773dd48cf402fd9
               </li>
             </ul>
           </li>
@@ -179,11 +229,19 @@ $unit    ='SI';
               </li>
               <li class="nav-item"><a href="{{ asset('admin/khsadm') }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Kartu Hasil Studi (KHS)</p></a>
               </li>
+<<<<<<< HEAD
               <li class="nav-item"><a href="{{ asset('admin/khsadm/ceksesi') }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Cek Sesi KHS</p></a>
               </li>
               <li class="nav-item"><a href="{{ asset('admin/jadwalujian/cekkehadiran') }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Cek Kehadiran</p></a>
               </li>
               <li class="nav-item"><a href="{{ asset('admin/prestasimhs') }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Prestasi Mahasiswa</p></a>
+=======
+              <li class="nav-item"><a href="{{ asset('admin.khsadm.ceksesi') }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Cek Sesi KHS</p></a>
+              </li>
+              <li class="nav-item"><a href="{{ asset('admin/jadwalujian/cekkehadiran') }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Cek Kehadiran</p></a>
+              </li>
+              <li class="nav-item"><a href="{{ asset('admin/prestasi/index') }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Prestasi Mahasiswa</p></a>
+>>>>>>> 76fcd5592d409d18cc03c06f7773dd48cf402fd9
               </li>
 
             </ul>
@@ -254,6 +312,7 @@ $unit    ='SI';
               <p>Dok SPMI<i class="fas fa-angle-left right"></i></p>
             </a>
             <ul class="nav nav-treeview">
+<<<<<<< HEAD
               <li class="nav-item"><a href="{{ asset('admin/kebijakanspmi') }}" class="nav-link"><i class="fa fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Kebijakan SPMI</p></a>
               </li>
               <li class="nav-item"><a href="{{ asset('admin/manualspmi') }}" class="nav-link"><i class="fa fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Manual SPMI</p></a>
@@ -269,6 +328,13 @@ $unit    ='SI';
               <li class="nav-item"><a href="{{ asset('admin/dokumenpenting') }}" class="nav-link"><i class="fa fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Dokumen Penting</p></a>
               </li>
               <li class="nav-item"><a href="{{ asset('admin/dokumenppepp') }}" class="nav-link"><i class="fa fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Dokumen PPEPP</p></a>
+=======
+              <li class="nav-item"><a href="{{ asset('admin/agenda') }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Kebijakan SPMI</p></a>
+              </li>
+              <li class="nav-item"><a href="{{ asset('admin/agenda/tambah') }}" class="nav-link"><i class="fa fa-plus nav-icon"></i><p>Tambah Event &amp; Agenda</p></a>
+              </li>
+              <li class="nav-item"><a href="{{ asset('admin/kategori_agenda') }}" class="nav-link"><i class="far fa-circle nav-icon" style="color: yellow; border-radius: 50%;"></i><p>Kategori Event &amp; Agenda</p></a>
+>>>>>>> 76fcd5592d409d18cc03c06f7773dd48cf402fd9
               </li>
             </ul>
           </li>
@@ -359,7 +425,11 @@ $unit    ='SI';
           </li>
 
           <li class="nav-item">
+<<<<<<< HEAD
             <a href="" class="nav-link">
+=======
+            <a href="{{ asset('admin.user.pict') }}" class="nav-link">
+>>>>>>> 76fcd5592d409d18cc03c06f7773dd48cf402fd9
               <i class="nav-icon fas fa-lock"></i>
               <p>Change Photo & Pass</p>
             </a>

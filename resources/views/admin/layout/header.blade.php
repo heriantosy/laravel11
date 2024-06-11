@@ -23,12 +23,18 @@
       <li class="nav-item">
         <a class="nav-link text-success" href="{{ asset('admin/user') }}">
           <i class="fa fa-lock"></i> 
+<<<<<<< HEAD
           Galih
         </a>
+=======
+           username
+         </a>
+>>>>>>> 76fcd5592d409d18cc03c06f7773dd48cf402fd9
       </li>
 
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item">
+<<<<<<< HEAD
         <a class="btn btn-primary btn-sm" href=""
             onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
@@ -37,6 +43,9 @@
         <form id="logout-form" action="" method="POST" class="d-none">
             @csrf
         </form>
+=======
+     
+>>>>>>> 76fcd5592d409d18cc03c06f7773dd48cf402fd9
       </li>
 
 
